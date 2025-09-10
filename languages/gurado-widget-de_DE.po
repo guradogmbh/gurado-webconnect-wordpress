@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gurado-widget 1.1.0\n"
+"POT-Creation-Date: 2025-09-10 00:00+0000\n"
+"PO-Revision-Date: 2025-09-10 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Deutsch\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: gurado-widget\n"
+
+#: assets/block.js:1
+msgid "Gurado: Gutschein-Widget"
+msgstr "Gurado: Gutschein-Widget"
+
+#: assets/block.js:1
+msgid "Gurado-Widget Einstellungen"
+msgstr "Gurado-Widget Einstellungen"
+
+#: assets/block.js:1
+msgid "Shop"
+msgstr "Shop"
+
+#: assets/block.js:1
+msgid "%s (required)"
+msgstr "%s (erforderlich)"
+
+#: assets/block.js:1
+msgid "Erforderlich, damit das Widget angezeigt wird."
+msgstr "Erforderlich, damit das Widget angezeigt wird."
+
+#: assets/block.js:1
+msgid "Modus"
+msgstr "Modus"
+
+#: assets/block.js:1
+msgid "Darstellung des Widgets"
+msgstr "Darstellung des Widgets"
+
+#: assets/block.js:1
+msgid "Entry-Page (page)"
+msgstr "Einstiegsseite (page)"
+
+#: assets/block.js:1
+msgid "Bestimmt, mit welcher Shop-Ansicht gestartet wird."
+msgstr "Bestimmt, mit welcher Shop-Ansicht gestartet wird."
+
+#: assets/block.js:1
+msgid "Ausrichtung (align)"
+msgstr "Ausrichtung (align)"
+
+#: assets/block.js:1
+msgid "%s (z. B. %s, %s)"
+msgstr "%s (z. B. %s, %s)"
+
+#: assets/block.js:1
+msgid "Product (ID als Zahl)"
+msgstr "Produkt (ID als Zahl)"
+
+#: assets/block.js:1
+msgid "Gurado-Widget (Vorschau)"
+msgstr "Gurado-Widget (Vorschau)"
+
+#: assets/block.js:1
+msgid "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."
+msgstr "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."
+
+# Kontext-Strings
+#: assets/block.js:1
+msgctxt "widget render mode"
+msgid "bubble"
+msgstr "bubble"
+
+#: assets/block.js:1
+msgctxt "widget render mode"
+msgid "embedded"
+msgstr "embedded"
+
+#: assets/block.js:1
+msgctxt "entry page"
+msgid "products"
+msgstr "products"
+
+#: assets/block.js:1
+msgctxt "entry page"
+msgid "product"
+msgstr "product"
+
+#: assets/block.js:1
+msgctxt "entry page"
+msgid "checkout"
+msgstr "checkout"
+
+#: assets/block.js:1
+msgctxt "entry page"
+msgid "payment"
+msgstr "payment"
+
+#: assets/block.js:1
+msgctxt "entry page"
+msgid "cart"
+msgstr "cart"
+
+#: assets/block.js:1
+msgctxt "bubble align"
+msgid "left"
+msgstr "left"
+
+#: assets/block.js:1
+msgctxt "bubble align"
+msgid "right"
+msgstr "right"
+
+# PHP
+#: gurado-widget.php:1
+msgid "Gurado-Widget: Bitte „shop“ konfigurieren."
+msgstr "Gurado-Widget: Bitte „shop“ konfigurieren."

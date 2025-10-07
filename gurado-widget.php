@@ -10,30 +10,33 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'GURADO_WIDGET_VERSION', '1.1.0' );
+define( 'GURADO_WIDGET_VERSION', '1.0.0' );
 define( 'GURADO_WIDGET_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'GURADO_WIDGET_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'GURADO_WIDGET_JS', 'guradoapi.oveleon.com/dist/widget.js' );
+define( 'GURADO_WIDGET_JS', 'statics.gurado.de/widget/assets/widget.js' );
 
-/**
- * Frontend-Script registrieren (Gurado Widget)
- */
+function gwb_load_textdomain() {
+    // Lade die Text Domain aus dem 'languages'-Ordner.
+    load_plugin_textdomain(
+        'gurado-widget',
+        false,
+        GURADO_WIDGET_PLUGIN_DIR . 'languages'
+    );
+}
+add_action( 'plugins_loaded', 'gwb_load_textdomain' );
+
 function gwb_register_frontend_script() {
     $base = GURADO_WIDGET_JS;
     $src  = is_ssl() ? "https://{$base}" : "http://{$base}";
-    wp_register_script( 'gurado-widget', $src, array(), null, true ); // in_footer => vor </body>
-    wp_set_script_translations( 'gwb-block-editor', 'gurado-widget', plugin_dir_path( __FILE__ ) . 'languages' );
+    wp_register_script( 'gurado-widget', $src, array(), null, true );
 }
 add_action( 'init', 'gwb_register_frontend_script' );
 
-/**
- * <gurado-widget> Tag bauen (mit Validierung & Conditional-Attributes)
- */
 function gwb_build_gurado_tag( $attrs ) {
     $defaults = array(
         'shop'    => '',
         'mode'    => 'bubble',
-        'page'    => 'products',
+        'page'    => '',
         'align'   => '',
         'offsetX' => '',
         'offsetY' => '',
@@ -49,47 +52,46 @@ function gwb_build_gurado_tag( $attrs ) {
     $offsetY = trim( wp_strip_all_tags( (string) $a['offsetY'] ) );
     $product = trim( (string) $a['product'] );
 
-    // Pflichtfeld
     if ( $shop === '' ) {
-        return '<div class="gwb-notice" style="color:#b11;">Gurado-Widget: Bitte „shop“ konfigurieren.</div>';
+        // Hinweis im Frontend (wird nur angezeigt, wenn der Shop-Wert fehlt)
+        return '<div class="gwb-notice" style="color:#b11;">Gurado-Widget: ' . __( 'shop_required', 'gurado-widget' ) . '</div>';
     }
 
-    // Whitelists / Fallbacks
     $mode_allowed = array( 'bubble', 'embedded' );
     if ( ! in_array( $mode, $mode_allowed, true ) ) $mode = 'bubble';
 
-    $page_allowed = array( 'product', 'products', 'checkout', 'payment', 'cart' );
-    if ( ! in_array( $page, $page_allowed, true ) ) $page = 'products';
-
-    $align_allowed = array( 'left', 'right' );
-    if ( $mode !== 'bubble' ) {
-        $align = $offsetX = $offsetY = ''; // nur bei bubble erlaubt
-    } else {
-        if ( $align !== '' && ! in_array( $align, $align_allowed, true ) ) $align = 'left';
+    $page_allowed = array( 'product', 'products', 'checkout', 'cart' );
+    if ( $page !== '' && ! in_array( $page, $page_allowed, true ) ) {
+        $page = '';
     }
 
-    if ( $page !== 'product' ) {
-        $product = '';
-    } else {
-        // harte Integer-Säuberung für product
-        if ( $product !== '' ) {
-            $product = (string) intval( $product, 10 );
+    if ( $mode === 'bubble' ) {
+        $align_allowed = array( 'left', 'right' );
+        if ( $align === '' ) {
+            $align = 'left';
+        } elseif ( ! in_array( $align, $align_allowed, true ) ) {
+            $align = 'left';
         }
+    } else {
+        $align = $offsetX = $offsetY = '';
     }
 
-    // Attributliste aufbauen
-    $attrs_html = array(
-        'shop="' . esc_attr( $shop ) . '"',
-        'mode="' . esc_attr( $mode ) . '"',
-        'page="' . esc_attr( $page ) . '"',
-    );
+    if ( $page === 'product' ) {
+        // Produkt-ID muss eine Ganzzahl sein
+        $product = ( $product !== '' ) ? (string) intval( $product, 10 ) : '';
+    } else {
+        $product = '';
+    }
 
+    $attrs_html = array( 'shop="' . esc_attr( $shop ) . '"' );
+    $attrs_html[] = 'mode="' . esc_attr( $mode ) . '"';
+
+    if ( $page !== '' )    $attrs_html[] = 'page="'    . esc_attr( $page )    . '"';
     if ( $mode === 'bubble' ) {
         if ( $align !== '' )   $attrs_html[] = 'align="'   . esc_attr( $align )   . '"';
         if ( $offsetX !== '' ) $attrs_html[] = 'offsetX="' . esc_attr( $offsetX ) . '"';
         if ( $offsetY !== '' ) $attrs_html[] = 'offsetY="' . esc_attr( $offsetY ) . '"';
     }
-
     if ( $page === 'product' && $product !== '' ) {
         $attrs_html[] = 'product="' . esc_attr( $product ) . '"';
     }
@@ -97,20 +99,23 @@ function gwb_build_gurado_tag( $attrs ) {
     return '<gurado-widget ' . implode( ' ', $attrs_html ) . '></gurado-widget>';
 }
 
+
 function gwb_ensure_script_enqueued() {
     if ( ! wp_script_is( 'gurado-widget', 'enqueued' ) ) {
         wp_enqueue_script( 'gurado-widget' );
     }
 }
 
+
 /**
- * Shortcode: [gurado_widget shop="..." mode="bubble" page="products" align="left" offsetX="1rem" offsetY="5px" product="123"]
+ * Shortcode: [gurado_widget ...]
  */
 function gwb_shortcode( $atts = array() ) {
     gwb_ensure_script_enqueued();
     return gwb_build_gurado_tag( $atts );
 }
 add_shortcode( 'gurado_widget', 'gwb_shortcode' );
+
 
 /**
  * Gutenberg-Block registrieren
@@ -123,10 +128,17 @@ function gwb_register_block() {
         GURADO_WIDGET_VERSION,
         true
     );
-    wp_set_script_translations( 'gwb-block-editor', 'gurado-widget', plugin_dir_path( __FILE__ ) . 'languages' );
+
+    wp_set_script_translations(
+        'gwb-block-editor',
+        'gurado-widget',
+        GURADO_WIDGET_PLUGIN_DIR . 'languages'
+    );
+
     register_block_type( 'gurado/widget', array(
         'api_version'     => 2,
         'editor_script'   => 'gwb-block-editor',
+        'title'           => __( 'plugin_title', 'gurado-widget' ),
         'render_callback' => function( $attrs ) {
             gwb_ensure_script_enqueued();
             return gwb_build_gurado_tag( $attrs );
@@ -134,7 +146,7 @@ function gwb_register_block() {
         'attributes'      => array(
             'shop'    => array( 'type' => 'string', 'default' => '' ),
             'mode'    => array( 'type' => 'string', 'default' => 'bubble' ),
-            'page'    => array( 'type' => 'string', 'default' => 'products' ),
+            'page'    => array( 'type' => 'string', 'default' => '' ),
             'align'   => array( 'type' => 'string', 'default' => '' ),
             'offsetX' => array( 'type' => 'string', 'default' => '' ),
             'offsetY' => array( 'type' => 'string', 'default' => '' ),

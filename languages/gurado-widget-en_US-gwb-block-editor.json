@@ -1,0 +1,40 @@
+{
+  "domain": "gurado-widget",
+  "locale_data": {
+    "gurado-widget": {
+      "": {
+        "domain": "gurado-widget",
+        "lang": "en_US"
+      },
+      "Gurado Widget": ["gurado"],
+      "widget_desc": ["The one-stop solution for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things for your business."],
+      "Gurado GmbH": ["gurado"],
+      "shop_required": ["Please configure “shop”."],
+      "plugin_title": ["gurado"],
+      "option_bubble": ["bubble"],
+      "option_embedded": ["embedded"],
+      "option_none": ["-"],
+      "option_products": ["products"],
+      "option_product": ["product"],
+      "option_checkout": ["checkout"],
+      "option_payment": ["payment"],
+      "option_cart": ["cart"],
+      "option_left": ["left"],
+      "option_right": ["right"],
+      "panel_title": ["Gurado Widget Settings"],
+      "field_shop_required": ["%s (required)"],
+      "field_shop_label": ["Shop"],
+      "field_shop_desc": ["Required for the widget to display."],
+      "field_mode_label": ["Mode"],
+      "field_mode_desc": ["Widget display mode"],
+      "field_page_label": ["Entry Page"],
+      "field_page_desc": ["Optional: Start page of the widget"],
+      "field_align_label": ["Alignment"],
+      "field_offsetX_label": ["offsetX (e.g., 1rem, 8px)"],
+      "field_offsetY_label": ["offsetY (e.g., 5px, 1rem)"],
+      "field_product_label": ["Product (numeric ID)"],
+      "preview_title": ["gurado (Preview)"],
+      "notice_missing_shop": ["Please fill in “%s” so the widget can render on the front end."]
+    }
+  }
+}

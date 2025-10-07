@@ -1,119 +1,98 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: gurado-widget 1.1.0\n"
-"POT-Creation-Date: 2025-09-10 00:00+0000\n"
-"PO-Revision-Date: 2025-09-10 00:00+0000\n"
-"Last-Translator: \n"
-"Language-Team: Deutsch\n"
+"Project-Id-Version: Gurado Widget 1.1.0\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: gurado-widget\n"
 
-#: assets/block.js:1
-msgid "Gurado: Gutschein-Widget"
+#. Plugin Name of the plugin
+msgid "gurado Widget"
+msgstr "gurado Widget"
+
+#. Description of the plugin
+msgid "widget_desc"
+msgstr "Die Komplettlösung für Gutscheine, Tickets, Coupons und Treueprogramme, mit der Sie Großes für Ihr Unternehmen erreichen können."
+
+#. Author of the plugin
+msgid "Gurado GmbH"
+msgstr "Gurado GmbH"
+
+msgid "Bitte „shop“ konfigurieren."
+msgstr "Bitte „shop“ konfigurieren."
+
+msgid "plugin_title"
 msgstr "Gurado: Gutschein-Widget"
 
-#: assets/block.js:1
-msgid "Gurado-Widget Einstellungen"
-msgstr "Gurado-Widget Einstellungen"
-
-#: assets/block.js:1
-msgid "Shop"
-msgstr "Shop"
-
-#: assets/block.js:1
-msgid "%s (required)"
-msgstr "%s (erforderlich)"
-
-#: assets/block.js:1
-msgid "Erforderlich, damit das Widget angezeigt wird."
-msgstr "Erforderlich, damit das Widget angezeigt wird."
-
-#: assets/block.js:1
-msgid "Modus"
-msgstr "Modus"
-
-#: assets/block.js:1
-msgid "Darstellung des Widgets"
-msgstr "Darstellung des Widgets"
-
-#: assets/block.js:1
-msgid "Entry-Page (page)"
-msgstr "Einstiegsseite (page)"
-
-#: assets/block.js:1
-msgid "Bestimmt, mit welcher Shop-Ansicht gestartet wird."
-msgstr "Bestimmt, mit welcher Shop-Ansicht gestartet wird."
-
-#: assets/block.js:1
-msgid "Ausrichtung (align)"
-msgstr "Ausrichtung (align)"
-
-#: assets/block.js:1
-msgid "%s (z. B. %s, %s)"
-msgstr "%s (z. B. %s, %s)"
-
-#: assets/block.js:1
-msgid "Product (ID als Zahl)"
-msgstr "Produkt (ID als Zahl)"
-
-#: assets/block.js:1
-msgid "Gurado-Widget (Vorschau)"
-msgstr "Gurado-Widget (Vorschau)"
-
-#: assets/block.js:1
-msgid "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."
-msgstr "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."
-
-# Kontext-Strings
-#: assets/block.js:1
-msgctxt "widget render mode"
-msgid "bubble"
+msgid "option_bubble"
 msgstr "bubble"
 
-#: assets/block.js:1
-msgctxt "widget render mode"
-msgid "embedded"
+msgid "option_embedded"
 msgstr "embedded"
 
-#: assets/block.js:1
-msgctxt "entry page"
-msgid "products"
+msgid "option_none"
+msgstr "— Keine Auswahl —"
+
+msgid "option_products"
 msgstr "products"
 
-#: assets/block.js:1
-msgctxt "entry page"
-msgid "product"
+msgid "option_product"
 msgstr "product"
 
-#: assets/block.js:1
-msgctxt "entry page"
-msgid "checkout"
+msgid "option_checkout"
 msgstr "checkout"
 
-#: assets/block.js:1
-msgctxt "entry page"
-msgid "payment"
+msgid "option_payment"
 msgstr "payment"
 
-#: assets/block.js:1
-msgctxt "entry page"
-msgid "cart"
+msgid "option_cart"
 msgstr "cart"
 
-#: assets/block.js:1
-msgctxt "bubble align"
-msgid "left"
+msgid "option_left"
 msgstr "left"
 
-#: assets/block.js:1
-msgctxt "bubble align"
-msgid "right"
+msgid "option_right"
 msgstr "right"
 
-# PHP
-#: gurado-widget.php:1
-msgid "Gurado-Widget: Bitte „shop“ konfigurieren."
-msgstr "Gurado-Widget: Bitte „shop“ konfigurieren."
+msgid "panel_title"
+msgstr "Gurado-Widget Einstellungen"
+
+msgid "field_shop_required"
+msgstr "%s (erforderlich)"
+
+msgid "field_shop_label"
+msgstr "Shop"
+
+msgid "field_shop_desc"
+msgstr "Erforderlich, damit das Widget angezeigt wird."
+
+msgid "field_mode_label"
+msgstr "Modus"
+
+msgid "field_mode_desc"
+msgstr "Darstellung des Widgets"
+
+msgid "field_page_label"
+msgstr "Einstiegsseite (page)"
+
+msgid "field_page_desc"
+msgstr "Optional: Startseite des Widgets"
+
+msgid "field_align_label"
+msgstr "Ausrichtung (align)"
+
+msgid "field_offsetX_label"
+msgstr "offsetX (z. B. 1rem, 8px)"
+
+msgid "field_offsetY_label"
+msgstr "offsetY (z. B. 5px, 1rem)"
+
+msgid "field_product_label"
+msgstr "Produkt (ID als Zahl)"
+
+msgid "preview_title"
+msgstr "Gurado-Widget (Vorschau)"
+
+msgid "notice_missing_shop"
+msgstr "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."

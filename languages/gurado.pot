@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gurado Widget 1.1.0\n"
+"Project-Id-Version: Gurado WebConnect 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gurado\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,11 +12,11 @@ msgstr ""
 "POT-Creation-Date: 2025-10-07T10:52:10+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: gurado-widget\n"
+"X-Domain: gurado\n"
 
 #. Plugin Name of the plugin
 #: gurado-widget.php
-msgid "Gurado Widget"
+msgid "Gurado WebConnect"
 msgstr ""
 
 #. Description of the plugin

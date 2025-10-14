@@ -5,26 +5,26 @@
     const { InspectorControls, useBlockProps } = blockEditor;
 
     const MODE_OPTIONS = [
-        { label: __('option_bubble', 'gurado-widget'), value: 'bubble' },
-        { label: __('option_embedded', 'gurado-widget'), value: 'embedded' },
+        { label: __('option_bubble', 'gurado'), value: 'bubble' },
+        { label: __('option_embedded', 'gurado'), value: 'embedded' },
     ];
 
     const PAGE_OPTIONS = [
-        { label: __('option_none', 'gurado-widget'), value: '' },
-        { label: __('option_products', 'gurado-widget'), value: 'products' },
-        { label: __('option_product', 'gurado-widget'), value: 'product' },
-        { label: __('option_checkout', 'gurado-widget'), value: 'checkout' },
-        { label: __('option_cart', 'gurado-widget'), value: 'cart' },
+        { label: __('option_none', 'gurado'), value: '' },
+        { label: __('option_products', 'gurado'), value: 'products' },
+        { label: __('option_product', 'gurado'), value: 'product' },
+        { label: __('option_checkout', 'gurado'), value: 'checkout' },
+        { label: __('option_cart', 'gurado'), value: 'cart' },
     ];
 
     const ALIGN_OPTIONS = [
-        { label: __('option_left', 'gurado-widget'), value: 'left' },
-        { label: __('option_right', 'gurado-widget'), value: 'right' },
+        { label: __('option_left', 'gurado'), value: 'left' },
+        { label: __('option_right', 'gurado'), value: 'right' },
     ];
 
     blocks.registerBlockType('gurado/widget', {
         apiVersion: 2,
-        title: __('plugin_title', 'gurado-widget'),
+        title: __('plugin_title', 'gurado'),
         icon: 'tickets-alt',
         category: 'widgets',
         attributes: {
@@ -57,52 +57,52 @@
 
             return el(Fragment, null,
                 el(InspectorControls, null,
-                    el(PanelBody, { title: __('panel_title', 'gurado-widget'), initialOpen: true },
+                    el(PanelBody, { title: __('panel_title', 'gurado'), initialOpen: true },
 
                         el(TextControl, {
-                            label: sprintf( __('field_shop_required', 'gurado-widget'), __('field_shop_label', 'gurado-widget') ),
-                            //help: __('field_shop_desc', 'gurado-widget'),
+                            label: sprintf( __('field_shop_required', 'gurado'), __('field_shop_label', 'gurado') ),
+                            //help: __('field_shop_desc', 'gurado'),
                             value: shop,
                             onChange: (v) => setAttributes({ shop: v })
                         }),
 
                         el(SelectControl, {
-                            label: __('field_mode_label', 'gurado-widget'),
-                            //help: __('field_mode_desc', 'gurado-widget'),
+                            label: __('field_mode_label', 'gurado'),
+                            //help: __('field_mode_desc', 'gurado'),
                             value: mode,
                             options: MODE_OPTIONS,
                             onChange: (v) => setAttributes({ mode: v })
                         }),
 
                         el(SelectControl, {
-                            label: __('field_page_label', 'gurado-widget'),
-                            //help: __('field_page_desc', 'gurado-widget'),
+                            label: __('field_page_label', 'gurado'),
+                            //help: __('field_page_desc', 'gurado'),
                             value: page,
                             options: PAGE_OPTIONS,
                             onChange: (v) => setAttributes({ page: v })
                         }),
 
                         isBubble && el(SelectControl, {
-                            label: __('field_align_label', 'gurado-widget'),
+                            label: __('field_align_label', 'gurado'),
                             value: align || 'left',
                             options: ALIGN_OPTIONS,
                             onChange: (v) => setAttributes({ align: v })
                         }),
 
                         isBubble && el(TextControl, {
-                            label: __('field_offsetX_label', 'gurado-widget'),
+                            label: __('field_offsetX_label', 'gurado'),
                             value: offsetX,
                             onChange: (v) => setAttributes({ offsetX: v })
                         }),
 
                         isBubble && el(TextControl, {
-                            label: __('field_offsetY_label', 'gurado-widget'),
+                            label: __('field_offsetY_label', 'gurado'),
                             value: offsetY,
                             onChange: (v) => setAttributes({ offsetY: v })
                         }),
 
                         isProductPage && el(TextControl, {
-                            label: __('field_product_label', 'gurado-widget'),
+                            label: __('field_product_label', 'gurado'),
                             value: product,
                             onChange: (v) => setAttributes({ product: v.replace(/[^0-9]/g, '') })
                         })
@@ -110,23 +110,23 @@
                 ),
 
                 el('div', blockProps,
-                    el('strong', null, __('preview_title', 'gurado-widget')),
+                    el('strong', null, __('preview_title', 'gurado')),
                     el('div', { style: { marginTop: '8px', fontSize: '12px', opacity: 0.85 } },
                         el('code', null, '<gurado-widget ...></gurado-widget>')
                     ),
                     (!shop) &&
                     el(Notice, { status: 'warning', isDismissible: false, style: { marginTop: '12px' } },
-                        sprintf( __('notice_missing_shop', 'gurado-widget'), __('field_shop_label', 'gurado-widget') )
+                        sprintf( __('notice_missing_shop', 'gurado'), __('field_shop_label', 'gurado') )
                     ),
                     (shop) &&
                     el('ul', { style: { marginTop: '10px', marginBottom: 0 } },
-                        el('li', null, __('field_shop_label', 'gurado-widget'), ': ', el('code', null, shop || '—')),
-                        el('li', null, __('field_mode_label', 'gurado-widget'), ': ', el('code', null, mode || 'bubble')),
-                        el('li', null, __('field_page_label', 'gurado-widget'), ': ', el('code', null, page || __('option_none', 'gurado-widget'))),
-                        isBubble && el('li', null, __('field_align_label', 'gurado-widget'), ': ', el('code', null, align || __('option_left', 'gurado-widget'))),
+                        el('li', null, __('field_shop_label', 'gurado'), ': ', el('code', null, shop || '—')),
+                        el('li', null, __('field_mode_label', 'gurado'), ': ', el('code', null, mode || 'bubble')),
+                        el('li', null, __('field_page_label', 'gurado'), ': ', el('code', null, page || __('option_none', 'gurado'))),
+                        isBubble && el('li', null, __('field_align_label', 'gurado'), ': ', el('code', null, align || __('option_left', 'gurado'))),
                         isBubble && el('li', null, 'offsetX: ', el('code', null, offsetX || '—')),
                         isBubble && el('li', null, 'offsetY: ', el('code', null, offsetY || '—')),
-                        isProductPage && el('li', null, __('field_product_label', 'gurado-widget'), ': ', el('code', null, product || '—'))
+                        isProductPage && el('li', null, __('field_product_label', 'gurado'), ': ', el('code', null, product || '—'))
                     )
                 )
             );

@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Gurado Widget
+ * Plugin Name: gurado WebConnect
  * Description: The one-stop software for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things with your business.
  * Version:     1.1.0
- * Author:      Gurado GmbH
+ * Author:      gurado GmbH
  * License:     GPL-2.0-or-later
- * Text Domain: gurado-widget
+ * Text Domain: gurado
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -14,16 +14,6 @@ define( 'GURADO_WIDGET_VERSION', '1.0.0' );
 define( 'GURADO_WIDGET_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'GURADO_WIDGET_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GURADO_WIDGET_JS', 'statics.gurado.de/widget/assets/widget.js' );
-
-function gwb_load_textdomain() {
-    // Lade die Text Domain aus dem 'languages'-Ordner.
-    load_plugin_textdomain(
-        'gurado-widget',
-        false,
-        GURADO_WIDGET_PLUGIN_DIR . 'languages'
-    );
-}
-add_action( 'plugins_loaded', 'gwb_load_textdomain' );
 
 function gwb_register_frontend_script() {
     $base = GURADO_WIDGET_JS;
@@ -53,8 +43,7 @@ function gwb_build_gurado_tag( $attrs ) {
     $product = trim( (string) $a['product'] );
 
     if ( $shop === '' ) {
-        // Hinweis im Frontend (wird nur angezeigt, wenn der Shop-Wert fehlt)
-        return '<div class="gwb-notice" style="color:#b11;">Gurado-Widget: ' . __( 'shop_required', 'gurado-widget' ) . '</div>';
+        return '<div class="gwb-notice" style="color:#b11;">gurado WebConnect: ' . __( 'shop_required', 'gurado' ) . '</div>';
     }
 
     $mode_allowed = array( 'bubble', 'embedded' );
@@ -77,7 +66,6 @@ function gwb_build_gurado_tag( $attrs ) {
     }
 
     if ( $page === 'product' ) {
-        // Produkt-ID muss eine Ganzzahl sein
         $product = ( $product !== '' ) ? (string) intval( $product, 10 ) : '';
     } else {
         $product = '';
@@ -106,7 +94,6 @@ function gwb_ensure_script_enqueued() {
     }
 }
 
-
 /**
  * Shortcode: [gurado_widget ...]
  */
@@ -131,14 +118,14 @@ function gwb_register_block() {
 
     wp_set_script_translations(
         'gwb-block-editor',
-        'gurado-widget',
+        'gurado',
         GURADO_WIDGET_PLUGIN_DIR . 'languages'
     );
 
     register_block_type( 'gurado/widget', array(
         'api_version'     => 2,
         'editor_script'   => 'gwb-block-editor',
-        'title'           => __( 'plugin_title', 'gurado-widget' ),
+        'title'           => __( 'plugin_title', 'gurado' ),
         'render_callback' => function( $attrs ) {
             gwb_ensure_script_enqueued();
             return gwb_build_gurado_tag( $attrs );

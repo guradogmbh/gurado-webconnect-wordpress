@@ -1,14 +1,14 @@
 {
-  "domain": "gurado-widget",
+  "domain": "gurado",
   "locale_data": {
-    "gurado-widget": {
+    "gurado": {
       "": {
-        "domain": "gurado-widget",
+        "domain": "gurado",
         "lang": "de_DE"
       },
-      "Gurado Widget": ["gurado"],
+      "gurado WebConnect": ["gurado"],
       "widget_desc": ["Die Komplettlösung für Gutscheine, Tickets, Coupons und Treueprogramme, mit der Sie Großes für Ihr Unternehmen erreichen können."],
-      "Gurado GmbH": ["gurado"],
+      "gurado GmbH": ["gurado"],
       "shop_required.": ["Bitte „shop“ konfigurieren."],
       "plugin_title": ["gurado"],
       "option_bubble": ["bubble"],
@@ -21,7 +21,7 @@
       "option_cart": ["Warenkorb"],
       "option_left": ["left"],
       "option_right": ["right"],
-      "panel_title": ["Gurado-Widget Einstellungen"],
+      "panel_title": ["gurado WebConnect Einstellungen"],
       "field_shop_required": ["%s (erforderlich)"],
       "field_shop_label": ["Shop"],
       "field_shop_desc": ["Erforderlich, damit das Widget angezeigt wird."],

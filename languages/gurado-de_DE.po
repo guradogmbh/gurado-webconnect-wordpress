@@ -1,29 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Gurado Widget 1.1.0\n"
-"Language: en_US\n"
+"Project-Id-Version: Gurado WebConnect 1.1.0\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: gurado-widget\n"
+"X-Domain: gurado\n"
 
 #. Plugin Name of the plugin
-msgid "gurado Widget"
-msgstr "gurado Widget"
+msgid "gurado WebConnect"
+msgstr "gurado WebConnect"
 
 #. Description of the plugin
 msgid "widget_desc"
-msgstr "The one-stop solution for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things for your business."
+msgstr "Die Komplettlösung für Gutscheine, Tickets, Coupons und Treueprogramme, mit der Sie Großes für Ihr Unternehmen erreichen können."
 
 #. Author of the plugin
-msgid "Gurado GmbH"
-msgstr "Gurado GmbH"
+msgid "gurado GmbH"
+msgstr "gurado GmbH"
 
 msgid "Bitte „shop“ konfigurieren."
-msgstr "Please configure “shop”."
+msgstr "Bitte „shop“ konfigurieren."
 
 msgid "plugin_title"
-msgstr "Gurado: Voucher Widget"
+msgstr "gurado WebConnect"
 
 msgid "option_bubble"
 msgstr "bubble"
@@ -32,7 +32,7 @@ msgid "option_embedded"
 msgstr "embedded"
 
 msgid "option_none"
-msgstr "— None —"
+msgstr "— Keine Auswahl —"
 
 msgid "option_products"
 msgstr "products"
@@ -56,43 +56,43 @@ msgid "option_right"
 msgstr "right"
 
 msgid "panel_title"
-msgstr "Gurado Widget Settings"
+msgstr "gurado WebConnect Einstellungen"
 
 msgid "field_shop_required"
-msgstr "%s (required)"
+msgstr "%s (erforderlich)"
 
 msgid "field_shop_label"
 msgstr "Shop"
 
 msgid "field_shop_desc"
-msgstr "Required for the widget to display."
+msgstr "Erforderlich, damit das Widget angezeigt wird."
 
 msgid "field_mode_label"
-msgstr "Mode"
+msgstr "Modus"
 
 msgid "field_mode_desc"
-msgstr "Widget display mode"
+msgstr "Darstellung des Widgets"
 
 msgid "field_page_label"
-msgstr "Entry Page (page)"
+msgstr "Einstiegsseite (page)"
 
 msgid "field_page_desc"
-msgstr "Optional: Start page of the widget"
+msgstr "Optional: Startseite des Widgets"
 
 msgid "field_align_label"
-msgstr "Alignment (align)"
+msgstr "Ausrichtung (align)"
 
 msgid "field_offsetX_label"
-msgstr "offsetX (e.g., 1rem, 8px)"
+msgstr "offsetX (z. B. 1rem, 8px)"
 
 msgid "field_offsetY_label"
-msgstr "offsetY (e.g., 5px, 1rem)"
+msgstr "offsetY (z. B. 5px, 1rem)"
 
 msgid "field_product_label"
-msgstr "Product (numeric ID)"
+msgstr "Produkt (ID als Zahl)"
 
 msgid "preview_title"
-msgstr "Gurado Widget (Preview)"
+msgstr "gurado WebConnect"
 
 msgid "notice_missing_shop"
-msgstr "Please fill in “%s” so the widget can render on the front end."
+msgstr "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."

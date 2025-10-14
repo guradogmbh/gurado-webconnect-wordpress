@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Gurado WebConnect 1.1.0\n"
+"Project-Id-Version: gurado WebConnect 1.1.0\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,7 +92,7 @@ msgid "field_product_label"
 msgstr "Product (numeric ID)"
 
 msgid "preview_title"
-msgstr "Gurado Widget (Preview)"
+msgstr "gurado WebConnect"
 
 msgid "notice_missing_shop"
 msgstr "Please fill in “%s” so the widget can render on the front end."

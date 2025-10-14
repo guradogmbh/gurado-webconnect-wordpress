@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Gurado WebConnect
+ * Plugin Name: gurado WebConnect
  * Description: The one-stop software for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things with your business.
  * Version:     1.1.0
  * Author:      gurado GmbH

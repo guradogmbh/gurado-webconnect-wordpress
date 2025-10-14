@@ -92,7 +92,7 @@ msgid "field_product_label"
 msgstr "Produkt (ID als Zahl)"
 
 msgid "preview_title"
-msgstr "Gurado-Widget (Vorschau)"
+msgstr "gurado WebConnect"
 
 msgid "notice_missing_shop"
 msgstr "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."

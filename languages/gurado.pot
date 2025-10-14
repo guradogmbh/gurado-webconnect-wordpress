@@ -1,8 +1,8 @@
-# Copyright (C) 2025 Gurado GmbH
+# Copyright (C) 2025 gurado GmbH
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gurado WebConnect 1.1.0\n"
+"Project-Id-Version: gurado WebConnect 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gurado\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: gurado-widget.php
-msgid "Gurado WebConnect"
+msgid "gurado WebConnect"
 msgstr ""
 
 #. Description of the plugin
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Author of the plugin
 #: gurado-widget.php
-msgid "Gurado GmbH"
+msgid "gurado GmbH"
 msgstr ""
 
 #: gurado-widget.php:68

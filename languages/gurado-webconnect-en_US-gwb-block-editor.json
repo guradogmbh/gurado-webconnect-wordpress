@@ -1,16 +1,16 @@
 {
-  "domain": "gurado",
+  "domain": "gurado-webconnect",
   "locale_data": {
-    "gurado": {
+    "gurado-webconnect": {
       "": {
-        "domain": "gurado",
+        "domain": "gurado-webconnect",
         "lang": "en_US"
       },
-      "gurado WebConnect": ["gurado"],
+      "gurado WebConnect": ["gurado WebConnect"],
       "widget_desc": ["The one-stop solution for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things for your business."],
       "gurado GmbH": ["gurado"],
       "shop_required": ["Please configure “shop”."],
-      "plugin_title": ["gurado"],
+      "plugin_title": ["gurado WebConnect"],
       "option_bubble": ["bubble"],
       "option_embedded": ["embedded"],
       "option_none": ["-"],
@@ -33,7 +33,7 @@
       "field_offsetX_label": ["offsetX (e.g., 1rem, 8px)"],
       "field_offsetY_label": ["offsetY (e.g., 5px, 1rem)"],
       "field_product_label": ["Product (numeric ID)"],
-      "preview_title": ["gurado (Preview)"],
+      "preview_title": ["gurado WebConnect (Preview)"],
       "notice_missing_shop": ["Please fill in “%s” so the widget can render on the front end."]
     }
   }

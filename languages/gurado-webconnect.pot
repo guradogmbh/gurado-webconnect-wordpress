@@ -12,28 +12,28 @@ msgstr ""
 "POT-Creation-Date: 2025-10-07T10:52:10+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: gurado\n"
+"X-Domain: gurado-webconnect\n"
 
 #. Plugin Name of the plugin
-#: gurado-widget.php
+#: gurado-webconnect.php
 msgid "gurado WebConnect"
 msgstr ""
 
 #. Description of the plugin
-#: gurado-widget.php
+#: gurado-webconnect.php
 msgid "widget_desc"
 msgstr ""
 
 #. Author of the plugin
-#: gurado-widget.php
+#: gurado-webconnect.php
 msgid "gurado GmbH"
 msgstr ""
 
-#: gurado-widget.php:68
+#: gurado-webconnect.php:68
 msgid "Bitte „shop“ konfigurieren."
 msgstr ""
 
-#: gurado-widget.php:155
+#: gurado-webconnect.php:155
 #: assets/block.js:29
 msgid "plugin_title"
 msgstr ""

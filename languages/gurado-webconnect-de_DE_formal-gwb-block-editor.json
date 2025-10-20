@@ -1,16 +1,16 @@
 {
-  "domain": "gurado",
+  "domain": "gurado-webconnect",
   "locale_data": {
-    "gurado": {
+    "gurado-webconnect": {
       "": {
-        "domain": "gurado",
+        "domain": "gurado-webconnect",
         "lang": "de_DE"
       },
-      "gurado WebConnect": ["gurado"],
+      "gurado WebConnect": ["gurado WebConnect"],
       "widget_desc": ["Die Komplettlösung für Gutscheine, Tickets, Coupons und Treueprogramme, mit der Sie Großes für Ihr Unternehmen erreichen können."],
       "gurado GmbH": ["gurado"],
       "shop_required.": ["Bitte „shop“ konfigurieren."],
-      "plugin_title": ["gurado"],
+      "plugin_title": ["gurado WebConnect"],
       "option_bubble": ["bubble"],
       "option_embedded": ["embedded"],
       "option_none": ["-"],
@@ -33,7 +33,7 @@
       "field_offsetX_label": ["offsetX (z. B. 1rem, 8px)"],
       "field_offsetY_label": ["offsetY (z. B. 5px, 1rem)"],
       "field_product_label": ["Produkt (ID als Zahl)"],
-      "preview_title": ["gurado (Vorschau)"],
+      "preview_title": ["gurado WebConnect (Vorschau)"],
       "notice_missing_shop": ["Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."]
     }
   }

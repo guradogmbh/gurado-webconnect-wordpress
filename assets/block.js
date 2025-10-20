@@ -5,26 +5,26 @@
     const { InspectorControls, useBlockProps } = blockEditor;
 
     const MODE_OPTIONS = [
-        { label: __('option_bubble', 'gurado'), value: 'bubble' },
-        { label: __('option_embedded', 'gurado'), value: 'embedded' },
+        { label: __('option_bubble', 'gurado-webconnect'), value: 'bubble' },
+        { label: __('option_embedded', 'gurado-webconnect'), value: 'embedded' },
     ];
 
     const PAGE_OPTIONS = [
-        { label: __('option_none', 'gurado'), value: '' },
-        { label: __('option_products', 'gurado'), value: 'products' },
-        { label: __('option_product', 'gurado'), value: 'product' },
-        { label: __('option_checkout', 'gurado'), value: 'checkout' },
-        { label: __('option_cart', 'gurado'), value: 'cart' },
+        { label: __('option_none', 'gurado-webconnect'), value: '' },
+        { label: __('option_products', 'gurado-webconnect'), value: 'products' },
+        { label: __('option_product', 'gurado-webconnect'), value: 'product' },
+        { label: __('option_checkout', 'gurado-webconnect'), value: 'checkout' },
+        { label: __('option_cart', 'gurado-webconnect'), value: 'cart' },
     ];
 
     const ALIGN_OPTIONS = [
-        { label: __('option_left', 'gurado'), value: 'left' },
-        { label: __('option_right', 'gurado'), value: 'right' },
+        { label: __('option_left', 'gurado-webconnect'), value: 'left' },
+        { label: __('option_right', 'gurado-webconnect'), value: 'right' },
     ];
 
-    blocks.registerBlockType('gurado/widget', {
+    blocks.registerBlockType('gurado/webconnect', {
         apiVersion: 2,
-        title: __('plugin_title', 'gurado'),
+        title: __('plugin_title', 'gurado-webconnect'),
         icon: 'tickets-alt',
         category: 'widgets',
         attributes: {
@@ -57,52 +57,52 @@
 
             return el(Fragment, null,
                 el(InspectorControls, null,
-                    el(PanelBody, { title: __('panel_title', 'gurado'), initialOpen: true },
+                    el(PanelBody, { title: __('panel_title', 'gurado-webconnect'), initialOpen: true },
 
                         el(TextControl, {
-                            label: sprintf( __('field_shop_required', 'gurado'), __('field_shop_label', 'gurado') ),
-                            //help: __('field_shop_desc', 'gurado'),
+                            label: sprintf( __('field_shop_required', 'gurado-webconnect'), __('field_shop_label', 'gurado-webconnect') ),
+                            //help: __('field_shop_desc', 'gurado-webconnect'),
                             value: shop,
                             onChange: (v) => setAttributes({ shop: v })
                         }),
 
                         el(SelectControl, {
-                            label: __('field_mode_label', 'gurado'),
-                            //help: __('field_mode_desc', 'gurado'),
+                            label: __('field_mode_label', 'gurado-webconnect'),
+                            //help: __('field_mode_desc', 'gurado-webconnect'),
                             value: mode,
                             options: MODE_OPTIONS,
                             onChange: (v) => setAttributes({ mode: v })
                         }),
 
                         el(SelectControl, {
-                            label: __('field_page_label', 'gurado'),
-                            //help: __('field_page_desc', 'gurado'),
+                            label: __('field_page_label', 'gurado-webconnect'),
+                            //help: __('field_page_desc', 'gurado-webconnect'),
                             value: page,
                             options: PAGE_OPTIONS,
                             onChange: (v) => setAttributes({ page: v })
                         }),
 
                         isBubble && el(SelectControl, {
-                            label: __('field_align_label', 'gurado'),
+                            label: __('field_align_label', 'gurado-webconnect'),
                             value: align || 'left',
                             options: ALIGN_OPTIONS,
                             onChange: (v) => setAttributes({ align: v })
                         }),
 
                         isBubble && el(TextControl, {
-                            label: __('field_offsetX_label', 'gurado'),
+                            label: __('field_offsetX_label', 'gurado-webconnect'),
                             value: offsetX,
                             onChange: (v) => setAttributes({ offsetX: v })
                         }),
 
                         isBubble && el(TextControl, {
-                            label: __('field_offsetY_label', 'gurado'),
+                            label: __('field_offsetY_label', 'gurado-webconnect'),
                             value: offsetY,
                             onChange: (v) => setAttributes({ offsetY: v })
                         }),
 
                         isProductPage && el(TextControl, {
-                            label: __('field_product_label', 'gurado'),
+                            label: __('field_product_label', 'gurado-webconnect'),
                             value: product,
                             onChange: (v) => setAttributes({ product: v.replace(/[^0-9]/g, '') })
                         })
@@ -110,23 +110,23 @@
                 ),
 
                 el('div', blockProps,
-                    el('strong', null, __('preview_title', 'gurado')),
+                    el('strong', null, __('preview_title', 'gurado-webconnect')),
                     el('div', { style: { marginTop: '8px', fontSize: '12px', opacity: 0.85 } },
                         el('code', null, '<gurado-widget ...></gurado-widget>')
                     ),
                     (!shop) &&
                     el(Notice, { status: 'warning', isDismissible: false, style: { marginTop: '12px' } },
-                        sprintf( __('notice_missing_shop', 'gurado'), __('field_shop_label', 'gurado') )
+                        sprintf( __('notice_missing_shop', 'gurado-webconnect'), __('field_shop_label', 'gurado-webconnect') )
                     ),
                     (shop) &&
                     el('ul', { style: { marginTop: '10px', marginBottom: 0 } },
-                        el('li', null, __('field_shop_label', 'gurado'), ': ', el('code', null, shop || '—')),
-                        el('li', null, __('field_mode_label', 'gurado'), ': ', el('code', null, mode || 'bubble')),
-                        el('li', null, __('field_page_label', 'gurado'), ': ', el('code', null, page || __('option_none', 'gurado'))),
-                        isBubble && el('li', null, __('field_align_label', 'gurado'), ': ', el('code', null, align || __('option_left', 'gurado'))),
+                        el('li', null, __('field_shop_label', 'gurado-webconnect'), ': ', el('code', null, shop || '—')),
+                        el('li', null, __('field_mode_label', 'gurado-webconnect'), ': ', el('code', null, mode || 'bubble')),
+                        el('li', null, __('field_page_label', 'gurado-webconnect'), ': ', el('code', null, page || __('option_none', 'gurado-webconnect'))),
+                        isBubble && el('li', null, __('field_align_label', 'gurado-webconnect'), ': ', el('code', null, align || __('option_left', 'gurado-webconnect'))),
                         isBubble && el('li', null, 'offsetX: ', el('code', null, offsetX || '—')),
                         isBubble && el('li', null, 'offsetY: ', el('code', null, offsetY || '—')),
-                        isProductPage && el('li', null, __('field_product_label', 'gurado'), ': ', el('code', null, product || '—'))
+                        isProductPage && el('li', null, __('field_product_label', 'gurado-webconnect'), ': ', el('code', null, product || '—'))
                     )
                 )
             );

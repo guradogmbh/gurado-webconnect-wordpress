@@ -5,7 +5,7 @@
  * Version:     1.1.0
  * Author:      gurado GmbH
  * License:     GPL-2.0-or-later
- * Text Domain: gurado
+ * Text Domain: gurado-webconnect
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -18,7 +18,7 @@ define( 'GURADO_WIDGET_JS', 'statics.gurado.de/widget/assets/widget.js' );
 function gwb_register_frontend_script() {
     $base = GURADO_WIDGET_JS;
     $src  = is_ssl() ? "https://{$base}" : "http://{$base}";
-    wp_register_script( 'gurado-widget', $src, array(), null, true );
+    wp_register_script( 'gurado-webconnect', $src, array(), GURADO_WIDGET_VERSION, true );
 }
 add_action( 'init', 'gwb_register_frontend_script' );
 
@@ -43,7 +43,7 @@ function gwb_build_gurado_tag( $attrs ) {
     $product = trim( (string) $a['product'] );
 
     if ( $shop === '' ) {
-        return '<div class="gwb-notice" style="color:#b11;">gurado WebConnect: ' . __( 'shop_required', 'gurado' ) . '</div>';
+        return '<div class="gwb-notice" style="color:#b11;">gurado WebConnect: ' . __( 'shop_required', 'gurado-webconnect' ) . '</div>';
     }
 
     $mode_allowed = array( 'bubble', 'embedded' );
@@ -89,8 +89,8 @@ function gwb_build_gurado_tag( $attrs ) {
 
 
 function gwb_ensure_script_enqueued() {
-    if ( ! wp_script_is( 'gurado-widget', 'enqueued' ) ) {
-        wp_enqueue_script( 'gurado-widget' );
+    if ( ! wp_script_is( 'gurado-webconnect', 'enqueued') ) {
+        wp_enqueue_script( 'gurado-webconnect' );
     }
 }
 
@@ -101,6 +101,7 @@ function gwb_shortcode( $atts = array() ) {
     gwb_ensure_script_enqueued();
     return gwb_build_gurado_tag( $atts );
 }
+
 add_shortcode( 'gurado_widget', 'gwb_shortcode' );
 
 
@@ -118,14 +119,14 @@ function gwb_register_block() {
 
     wp_set_script_translations(
         'gwb-block-editor',
-        'gurado',
+        'gurado-webconnect',
         GURADO_WIDGET_PLUGIN_DIR . 'languages'
     );
 
-    register_block_type( 'gurado/widget', array(
+    register_block_type( 'gurado/webconnect', array(
         'api_version'     => 2,
         'editor_script'   => 'gwb-block-editor',
-        'title'           => __( 'plugin_title', 'gurado' ),
+        'title'           => __( 'plugin_title', 'gurado-webconnect' ),
         'render_callback' => function( $attrs ) {
             gwb_ensure_script_enqueued();
             return gwb_build_gurado_tag( $attrs );

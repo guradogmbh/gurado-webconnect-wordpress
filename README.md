@@ -11,3 +11,4 @@ service into your WordPress website.</i></p>
 
 <a href="https://site.gurado.de/" target="_blank" rel="noreferrer">gurado</a>, the one-stop software for vouchers,
 tickets, coupons, and loyalty programs that helps you achieve great things with your business.
+

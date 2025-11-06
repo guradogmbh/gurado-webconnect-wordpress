@@ -19,7 +19,7 @@ msgstr "The one-stop solution for vouchers, tickets, coupons, and loyalty progra
 msgid "gurado GmbH"
 msgstr "gurado GmbH"
 
-msgid "Bitte „shop“ konfigurieren."
+msgid "shop_required"
 msgstr "Please configure “shop”."
 
 msgid "plugin_title"
@@ -64,29 +64,20 @@ msgstr "%s (required)"
 msgid "field_shop_label"
 msgstr "Shop"
 
-msgid "field_shop_desc"
-msgstr "Required for the widget to display."
-
 msgid "field_mode_label"
 msgstr "Mode"
 
-msgid "field_mode_desc"
-msgstr "Widget display mode"
-
 msgid "field_page_label"
-msgstr "Entry Page (page)"
-
-msgid "field_page_desc"
-msgstr "Optional: Start page of the widget"
+msgstr "Entry Page"
 
 msgid "field_align_label"
-msgstr "Alignment (align)"
+msgstr "Alignment"
 
 msgid "field_offsetX_label"
-msgstr "offsetX (e.g., 1rem, 8px)"
+msgstr "Offset X (e.g., 1rem, 8px)"
 
 msgid "field_offsetY_label"
-msgstr "offsetY (e.g., 5px, 1rem)"
+msgstr "Offset Y (e.g., 5px, 1rem)"
 
 msgid "field_product_label"
 msgstr "Product (numeric ID)"

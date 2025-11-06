@@ -19,7 +19,7 @@ msgstr "Die Komplettlösung für Gutscheine, Tickets, Coupons und Treueprogramme
 msgid "gurado GmbH"
 msgstr "gurado GmbH"
 
-msgid "Bitte „shop“ konfigurieren."
+msgid "shop_required"
 msgstr "Bitte „shop“ konfigurieren."
 
 msgid "plugin_title"
@@ -64,35 +64,26 @@ msgstr "%s (erforderlich)"
 msgid "field_shop_label"
 msgstr "Shop"
 
-msgid "field_shop_desc"
-msgstr "Erforderlich, damit das Widget angezeigt wird."
-
 msgid "field_mode_label"
 msgstr "Modus"
 
-msgid "field_mode_desc"
-msgstr "Darstellung des Widgets"
-
 msgid "field_page_label"
 msgstr "Einstiegsseite (page)"
-
-msgid "field_page_desc"
-msgstr "Optional: Startseite des Widgets"
 
 msgid "field_align_label"
 msgstr "Ausrichtung (align)"
 
 msgid "field_offsetX_label"
-msgstr "offsetX (z. B. 1rem, 8px)"
+msgstr "Abstand X (z. B. 1rem, 8px)"
 
 msgid "field_offsetY_label"
-msgstr "offsetY (z. B. 5px, 1rem)"
+msgstr "Abstand Y (z. B. 5px, 1rem)"
 
 msgid "field_product_label"
 msgstr "Produkt (ID als Zahl)"
 
 msgid "preview_title"
-msgstr "gurado WebConnect"
+msgstr "gurado WebConnect (Vorschau)"
 
 msgid "notice_missing_shop"
 msgstr "Bitte „%s“ ausfüllen, damit das Widget im Frontend gerendert wird."

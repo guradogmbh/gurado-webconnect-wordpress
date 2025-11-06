@@ -1,6 +1,9 @@
+# gurado-webconnect.pot
+# Copyright (C) 2025 gurado GmbH
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: gurado WebConnect 1.1.0\n"
+"Project-Id-Version: gurado WebConnect 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gurado\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,81 +18,92 @@ msgstr ""
 #. Plugin Name of the plugin
 #: gurado-webconnect.php
 msgid "gurado WebConnect"
-msgstr "gurado WebConnect"
+msgstr ""
 
 #. Description of the plugin
 #: gurado-webconnect.php
-msgid "widget_desc"
-msgstr "The one-stop solution for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things for your business."
+msgid "The one-stop software for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things with your business."
+msgstr ""
 
 msgid "gurado GmbH"
-msgstr "gurado GmbH"
+msgstr ""
 
-msgid "shop_required"
-msgstr "Please configure “shop”."
+#: gurado-webconnect.php
+msgid "Please configure “shop” field."
+msgstr ""
 
-msgid "plugin_title"
-msgstr "gurado WebConnect"
+#: assets/block.js
+msgid "bubble"
+msgstr ""
 
-msgid "option_bubble"
-msgstr "bubble"
+#: assets/block.js
+msgid "embedded"
+msgstr ""
 
-msgid "option_embedded"
-msgstr "embedded"
+#: assets/block.js
+msgid "— None —"
+msgstr ""
 
-msgid "option_none"
-msgstr "— None —"
+#: assets/block.js
+msgid "products"
+msgstr ""
 
-msgid "option_products"
-msgstr "products"
+#: assets/block.js
+msgid "product"
+msgstr ""
 
-msgid "option_product"
-msgstr "product"
+#: assets/block.js
+msgid "checkout"
+msgstr ""
 
-msgid "option_checkout"
-msgstr "checkout"
+#: assets/block.js
+msgid "cart"
+msgstr ""
 
-msgid "option_payment"
-msgstr "payment"
+#: assets/block.js
+msgid "left"
+msgstr ""
 
-msgid "option_cart"
-msgstr "cart"
+#: assets/block.js
+msgid "right"
+msgstr ""
 
-msgid "option_left"
-msgstr "left"
+#: assets/block.js
+msgid "gurado WebConnect Settings"
+msgstr ""
 
-msgid "option_right"
-msgstr "right"
+#: assets/block.js
+msgid "%s (required)"
+msgstr ""
 
-msgid "panel_title"
-msgstr "gurado WebConnect Settings"
+#: assets/block.js
+msgid "Shop"
+msgstr ""
 
-msgid "field_shop_required"
-msgstr "%s (required)"
+#: assets/block.js
+msgid "Mode"
+msgstr ""
 
-msgid "field_shop_label"
-msgstr "Shop"
+#: assets/block.js
+msgid "Entry Page"
+msgstr ""
 
-msgid "field_mode_label"
-msgstr "Mode"
+#: assets/block.js
+msgid "Alignment"
+msgstr ""
 
-msgid "field_page_label"
-msgstr "Entry Page"
+#: assets/block.js
+msgid "Offset X (e.g., 1rem, 8px)"
+msgstr ""
 
-msgid "field_align_label"
-msgstr "Alignment"
+#: assets/block.js
+msgid "Offset Y (e.g., 5px, 1rem)"
+msgstr ""
 
-msgid "field_offsetX_label"
-msgstr "Offset X (e.g., 1rem, 8px)"
+#: assets/block.js
+msgid "Product (numeric ID)"
+msgstr ""
 
-msgid "field_offsetY_label"
-msgstr "Offset Y (e.g., 5px, 1rem)"
-
-msgid "field_product_label"
-msgstr "Product (numeric ID)"
-
-msgid "preview_title"
-msgstr "gurado WebConnect"
-
-msgid "notice_missing_shop"
-msgstr "Please fill in “%s” so the widget can render on the front end."
+#: assets/block.js
+msgid "Please fill in “%s” so the widget can render on the front end."
+msgstr ""

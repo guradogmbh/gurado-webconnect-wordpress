@@ -43,7 +43,8 @@ function gwb_build_gurado_tag( $attrs ) {
     $product = trim( (string) $a['product'] );
 
     if ( $shop === '' ) {
-        return '<div class="gwb-notice" style="color:#b11;">gurado WebConnect: ' . __( 'shop_required', 'gurado-webconnect' ) . '</div>';
+        // Geändert von 'shop_required'
+        return '<div class="gwb-notice" style="color:#b11;">gurado WebConnect: ' . __( 'Please configure “shop” field.', 'gurado-webconnect' ) . '</div>';
     }
 
     $mode_allowed = array( 'bubble', 'embedded' );
@@ -126,7 +127,8 @@ function gwb_register_block() {
     register_block_type( 'gurado/webconnect', array(
         'api_version'     => 2,
         'editor_script'   => 'gwb-block-editor',
-        'title'           => __( 'plugin_title', 'gurado-webconnect' ),
+        // Geändert von 'plugin_title'
+        'title'           => __( 'gurado WebConnect', 'gurado-webconnect' ),
         'render_callback' => function( $attrs ) {
             gwb_ensure_script_enqueued();
             return gwb_build_gurado_tag( $attrs );

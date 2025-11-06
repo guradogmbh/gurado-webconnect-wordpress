@@ -1,6 +1,7 @@
+# gurado-webconnect-en_US.po
 msgid ""
 msgstr ""
-"Project-Id-Version: gurado WebConnect 1.1.0\n"
+"Project-Id-Version: gurado WebConnect 1.1.1\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12,78 +13,69 @@ msgid "gurado WebConnect"
 msgstr "gurado WebConnect"
 
 #. Description of the plugin
-msgid "widget_desc"
-msgstr "The one-stop solution for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things for your business."
+msgid "The one-stop software for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things with your business."
+msgstr "The one-stop software for vouchers, tickets, coupons, and loyalty programs that helps you achieve great things with your business."
 
 #. Author of the plugin
 msgid "gurado GmbH"
 msgstr "gurado GmbH"
 
-msgid "shop_required"
-msgstr "Please configure “shop”."
+msgid "Please configure “shop” field."
+msgstr "Please configure “shop” field."
 
-msgid "plugin_title"
-msgstr "gurado WebConnect"
-
-msgid "option_bubble"
+msgid "bubble"
 msgstr "bubble"
 
-msgid "option_embedded"
+msgid "embedded"
 msgstr "embedded"
 
-msgid "option_none"
+msgid "— None —"
 msgstr "— None —"
 
-msgid "option_products"
+msgid "products"
 msgstr "products"
 
-msgid "option_product"
+msgid "product"
 msgstr "product"
 
-msgid "option_checkout"
+msgid "checkout"
 msgstr "checkout"
 
-msgid "option_payment"
-msgstr "payment"
-
-msgid "option_cart"
+msgid "cart"
 msgstr "cart"
 
-msgid "option_left"
+msgid "left"
 msgstr "left"
 
-msgid "option_right"
+msgid "right"
 msgstr "right"
 
-msgid "panel_title"
+msgid "gurado WebConnect Settings"
 msgstr "gurado WebConnect Settings"
 
-msgid "field_shop_required"
+msgid "%s (required)"
 msgstr "%s (required)"
 
-msgid "field_shop_label"
+msgid "Shop"
 msgstr "Shop"
 
-msgid "field_mode_label"
+msgid "Mode"
 msgstr "Mode"
 
-msgid "field_page_label"
+msgid "Entry Page"
 msgstr "Entry Page"
 
-msgid "field_align_label"
+msgid "Alignment"
 msgstr "Alignment"
 
-msgid "field_offsetX_label"
+msgid "Offset X (e.g., 1rem, 8px)"
 msgstr "Offset X (e.g., 1rem, 8px)"
 
-msgid "field_offsetY_label"
+msgid "Offset Y (e.g., 5px, 1rem)"
 msgstr "Offset Y (e.g., 5px, 1rem)"
 
-msgid "field_product_label"
+msgid "Product (numeric ID)"
 msgstr "Product (numeric ID)"
 
-msgid "preview_title"
-msgstr "gurado WebConnect"
-
-msgid "notice_missing_shop"
+msgid "Please fill in “%s” so the widget can render on the front end."
 msgstr "Please fill in “%s” so the widget can render on the front end."

@@ -57,6 +57,10 @@ msgid "checkout"
 msgstr ""
 
 #: assets/block.js
+msgid "categories"
+msgstr ""
+
+#: assets/block.js
 msgid "cart"
 msgstr ""
 

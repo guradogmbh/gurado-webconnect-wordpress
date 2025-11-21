@@ -50,7 +50,7 @@ function gwb_build_gurado_tag( $attrs ) {
     $mode_allowed = array( 'bubble', 'embedded' );
     if ( ! in_array( $mode, $mode_allowed, true ) ) $mode = 'bubble';
 
-    $page_allowed = array( 'product', 'products', 'checkout', 'cart' );
+    $page_allowed = array( 'product', 'products', 'categories', 'checkout', 'cart' );
     if ( $page !== '' && ! in_array( $page, $page_allowed, true ) ) {
         $page = '';
     }

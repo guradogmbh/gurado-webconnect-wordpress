@@ -38,6 +38,9 @@ msgstr "products"
 msgid "product"
 msgstr "product"
 
+msgid "categories"
+msgstr "categories"
+
 msgid "checkout"
 msgstr "checkout"
 

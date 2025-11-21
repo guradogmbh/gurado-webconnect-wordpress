@@ -14,6 +14,7 @@
         { label: __('— None —', 'gurado-webconnect'), value: '' },
         { label: __('products', 'gurado-webconnect'), value: 'products' },
         { label: __('product', 'gurado-webconnect'), value: 'product' },
+        { label: __('categories', 'gurado-webconnect'), value: 'categories' },
         { label: __('checkout', 'gurado-webconnect'), value: 'checkout' },
         { label: __('cart', 'gurado-webconnect'), value: 'cart' },
     ];

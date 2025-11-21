@@ -40,6 +40,9 @@ msgstr "Produkt"
 msgid "checkout"
 msgstr "Checkout"
 
+msgid "categories"
+msgstr "Kategorien"
+
 msgid "cart"
 msgstr "Warenkorb"
 

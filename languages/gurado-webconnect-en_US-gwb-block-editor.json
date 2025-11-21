@@ -11,6 +11,7 @@
       "embedded": ["embedded"],
       "— None —": ["— None —"],
       "products": ["products"],
+      "categories": ["categories"],
       "product": ["product"],
       "checkout": ["checkout"],
       "cart": ["cart"],

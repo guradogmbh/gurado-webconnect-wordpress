@@ -12,6 +12,7 @@
       "— None —": ["— Keine Auswahl —"],
       "products": ["Produktliste"],
       "product": ["Produkt"],
+      "categories": ["Kategorien"],
       "checkout": ["Checkout"],
       "cart": ["Warenkorb"],
       "left": ["Links"],

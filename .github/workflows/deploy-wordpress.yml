@@ -1,0 +1,42 @@
+name: Publish plugin to WordPress.org
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wordpress-org-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: ${{ !github.event.release.prerelease }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout released tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Verify plugin versions match release tag
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+          version="${RELEASE_TAG#v}"
+          php_version="$(sed -nE 's/^[[:space:]]*\*[[:space:]]*Version:[[:space:]]*([0-9.]+).*/\1/p' gurado-webconnect.php | head -1)"
+          stable_tag="$(sed -nE 's/^Stable tag:[[:space:]]*([0-9.]+).*/\1/p' readme.txt | head -1)"
+          test "$php_version" = "$version" || { echo "Plugin header version $php_version differs from release $version"; exit 1; }
+          test "$stable_tag" = "$version" || { echo "Stable tag $stable_tag differs from release $version"; exit 1; }
+          php -l gurado-webconnect.php
+
+      - name: Deploy WordPress plugin
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: gurado-webconnect
